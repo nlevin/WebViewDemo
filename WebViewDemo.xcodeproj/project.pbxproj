@@ -19,6 +19,7 @@
 		19BD1B15181F76A8004EBA7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BD1AFD181F76A8004EBA7E /* UIKit.framework */; };
 		19BD1B1D181F76A8004EBA7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19BD1B1B181F76A8004EBA7E /* InfoPlist.strings */; };
 		19BD1B1F181F76A8004EBA7E /* WebViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BD1B1E181F76A8004EBA7E /* WebViewDemoTests.m */; };
+		19BD1B2A181F76E4004EBA7E /* WVDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BD1B29181F76E4004EBA7E /* WVDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		19BD1B1A181F76A8004EBA7E /* WebViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		19BD1B1C181F76A8004EBA7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19BD1B1E181F76A8004EBA7E /* WebViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewDemoTests.m; sourceTree = "<group>"; };
+		19BD1B28181F76E4004EBA7E /* WVDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WVDemoViewController.h; path = ../Source/WVDemoViewController.h; sourceTree = "<group>"; };
+		19BD1B29181F76E4004EBA7E /* WVDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WVDemoViewController.m; path = ../Source/WVDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				19BD1B08181F76A8004EBA7E /* WVAppDelegate.h */,
 				19BD1B09181F76A8004EBA7E /* WVAppDelegate.m */,
+				19BD1B28181F76E4004EBA7E /* WVDemoViewController.h */,
+				19BD1B29181F76E4004EBA7E /* WVDemoViewController.m */,
 				19BD1B0B181F76A8004EBA7E /* Images.xcassets */,
 				19BD1B00181F76A8004EBA7E /* Supporting Files */,
 			);
@@ -192,6 +197,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Nirav Savjani";
 				TargetAttributes = {
+					19BD1AF5181F76A8004EBA7E = {
+						DevelopmentTeam = UQ7M7C7ZQR;
+					};
 					19BD1B10181F76A8004EBA7E = {
 						TestTargetID = 19BD1AF5181F76A8004EBA7E;
 					};
@@ -241,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BD1B06181F76A8004EBA7E /* main.m in Sources */,
+				19BD1B2A181F76E4004EBA7E /* WVDemoViewController.m in Sources */,
 				19BD1B0A181F76A8004EBA7E /* WVAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,10 +371,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebViewDemo/WebViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "WebViewDemo/WebViewDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WebViewDemo;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -375,10 +387,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebViewDemo/WebViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "WebViewDemo/WebViewDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WebViewDemo;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -400,7 +415,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "WebViewDemoTests/WebViewDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WebViewDemoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -419,7 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WebViewDemo/WebViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "WebViewDemoTests/WebViewDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WebViewDemoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -444,6 +459,7 @@
 				19BD1B24181F76A8004EBA7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19BD1B25181F76A8004EBA7E /* Build configuration list for PBXNativeTarget "WebViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +468,7 @@
 				19BD1B27181F76A8004EBA7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
